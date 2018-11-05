@@ -1,0 +1,20 @@
+version: '3.1'
+services:
+  db:
+    image: postgres
+    restart: always
+    container_name: "bi_db"
+    environment:
+      POSTGRES_DB: "proyecto_bi"
+      POSTGRES_USER: "proyecto_bi"
+      POSTGRES_PASSWORD: 123456
+    volumes:
+      - ./db_data:/var/lib/postgresql/data
+      - ./my_scripts:/my_scripts
+    ports:
+      - 5432:5432
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
