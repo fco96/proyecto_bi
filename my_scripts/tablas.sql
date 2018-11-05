@@ -60,7 +60,7 @@ CREATE TABLE IF NOT EXISTS perfil (
     cant_clientes int DEFAULT 0,
     carga_prom_mensual real DEFAULT 0.0,
     carga_prom_total real DEFAULT 0.0,
-    porcentaje_clientes real DEFAULT 0.0,
+    porcentaje_fugados real DEFAULT 0.0,
 
     sexo_id VARCHAR(6) REFERENCES sexo (genero) ON UPDATE CASCADE,
     tipo_pago_id VARCHAR(30) REFERENCES tipo_pago (metodo) ON UPDATE CASCADE,
