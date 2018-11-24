@@ -58,6 +58,8 @@ CREATE TABLE IF NOT EXISTS plan (
 CREATE TABLE IF NOT EXISTS perfil (
     cant_fugados int DEFAULT 0,
     cant_clientes int DEFAULT 0,
+    carga_prom_mensual_fugados real DEFAULT 0.0,
+    carga_prom_total_fugados real DEFAULT 0.0,
     carga_prom_mensual real DEFAULT 0.0,
     carga_prom_total real DEFAULT 0.0,
     porcentaje_fugados real DEFAULT 0.0,
